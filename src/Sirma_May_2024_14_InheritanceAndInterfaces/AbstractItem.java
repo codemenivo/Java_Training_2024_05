@@ -45,6 +45,7 @@ public abstract class AbstractItem implements Item, Categorizable, Breakable, Pe
 
     @Override
     public boolean isBreakable() {
+
         return breakable;
     }
 
@@ -55,4 +56,23 @@ public abstract class AbstractItem implements Item, Categorizable, Breakable, Pe
         }
     }
 
+    @Override
+    public boolean isPerishable() {
+        return perishable;
+    }
+
+    @Override
+    public void handlingExpiration() {
+        System.out.printf("%s The expiration date has expired");
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
+
+    @Override
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }
