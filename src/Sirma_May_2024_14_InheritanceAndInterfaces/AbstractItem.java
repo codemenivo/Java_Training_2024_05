@@ -26,4 +26,33 @@ public abstract class AbstractItem implements Item, Categorizable, Breakable, Pe
         System.out.println(getDetails());
     }
 
+    @Override
+    public double calculateValue() {
+
+        return price;
+    }
+
+    @Override
+    public void setCategory(String category) {
+
+        this.category = category;
+    }
+
+    @Override
+    public String getCategory() {
+        return category;
+    }
+
+    @Override
+    public boolean isBreakable() {
+        return breakable;
+    }
+
+    @Override
+    public void handlingBreakage() {
+        if (breakable) {
+            System.out.printf("%s Atention! Breakable Product", this.name);
+        }
+    }
+
 }
