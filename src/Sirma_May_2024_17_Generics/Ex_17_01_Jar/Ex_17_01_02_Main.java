@@ -1,4 +1,6 @@
-package Sirma_May_2024_17_Generics;
+package Sirma_May_2024_17_Generics.Ex_17_01_Jar;
+
+import Sirma_May_2024_17_Generics.Ex_17_01_Jar.Ex_17_01_01_Jar;
 
 public class Ex_17_01_02_Main {
     public static void main(String[] args) {

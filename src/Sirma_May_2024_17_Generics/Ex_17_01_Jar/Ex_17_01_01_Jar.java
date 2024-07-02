@@ -1,4 +1,4 @@
-package Sirma_May_2024_17_Generics;
+package Sirma_May_2024_17_Generics.Ex_17_01_Jar;
 
 import java.util.ArrayDeque;
 
