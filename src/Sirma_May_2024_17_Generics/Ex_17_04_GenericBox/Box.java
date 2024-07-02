@@ -19,8 +19,8 @@ public class Box<T> {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (T element : elements) {
-            sb.append(element.getClass().getName()).append(": ").append(element);
-            System.out.println();
+            sb.append(element.getClass().getName()).append(": ").append(element).append("\n");
+
         }
         return sb.toString();
     }
