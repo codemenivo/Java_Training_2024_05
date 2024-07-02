@@ -6,7 +6,7 @@ public class Main {
         ArrayCreator arrayCreator = new ArrayCreator();
 
         String[] strArray = ArrayCreator.create(String.class, 5, "YYY");
-        Integer[] intArray = ArrayCreator.create(5, 12);
+        Integer[] intArray = ArrayCreator.create(5, 14);
 
         for (Integer integer : intArray) {
             System.out.printf("%d ", integer);

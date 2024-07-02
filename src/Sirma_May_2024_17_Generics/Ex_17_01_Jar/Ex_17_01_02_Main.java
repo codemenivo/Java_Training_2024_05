@@ -7,7 +7,7 @@ public class Ex_17_01_02_Main {
 
         Ex_17_01_01_Jar<Integer> jarInt = new Ex_17_01_01_Jar<>();
         jarInt.add(8);
-        jarInt.add(9);
+        jarInt.add(7);
         jarInt.add(10);
 
         Ex_17_01_01_Jar<String> jarStr = new Ex_17_01_01_Jar<>();
