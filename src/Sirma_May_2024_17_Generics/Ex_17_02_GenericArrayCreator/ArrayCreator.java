@@ -5,7 +5,7 @@ import java.lang.reflect.Array;
 public class ArrayCreator {
 
     public static<T> T[] create(int length, T item) {
-        T[] array = (T[]) new Object[length];
+        T[] array = (T[]) Array.newInstance(item.getClass(), length);
         for (int i = 0; i < length; i++) {
             array[i] = item;
         }
@@ -21,5 +21,6 @@ public class ArrayCreator {
         }
         return array;
     }
+
 
 }

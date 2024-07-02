@@ -7,7 +7,15 @@ public class Main {
 
         String[] strArray = ArrayCreator.create(String.class, 5, "YYY");
         Integer[] intArray = ArrayCreator.create(5, 12);
+
+        for (Integer integer : intArray) {
+            System.out.printf("%d ", integer);
+        }
         System.out.println();
+
+        for (String s : strArray) {
+            System.out.printf("%s ", s);
+        }
 
     }
 }
