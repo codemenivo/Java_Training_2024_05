@@ -1,4 +1,4 @@
-package Sirma_May_2024_17_Generics.GenCountMethodString;
+package Sirma_May_2024_17_Generics.Ex_17_08_GenCountMethodString;
 
 import java.util.Scanner;
 
