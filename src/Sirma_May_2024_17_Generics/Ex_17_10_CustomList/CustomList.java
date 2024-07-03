@@ -1,6 +1,8 @@
 package Sirma_May_2024_17_Generics.Ex_17_10_CustomList;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class CustomList<T extends Comparable<T>>{
@@ -52,11 +54,13 @@ public class CustomList<T extends Comparable<T>>{
     }
 
     public T getMax() {
-        return this.elements.stream().max((e1, e2) -> e1.compareTo(e2)).get();
+        return Collections.max(this.elements);
+        //return this.elements.stream().max((e1, e2) -> e1.compareTo(e2)).get();
     }
 
     public T getMin() {
-        return this.elements.stream().min((e1, e2) -> e1.compareTo(e2)).get();
+        return Collections.min(this.elements);
+        //return this.elements.stream().min((e1, e2) -> e1.compareTo(e2)).get();
     }
 
     public void print(){

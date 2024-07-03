@@ -17,7 +17,7 @@ public class CountBiggerStr<T extends Comparable<T>> {
     public int counterForBiggerElements (T element) {
         int counter = 0;
         for (T listElement : elements) {
-            if (listElement.compareTo(element) == 1) {
+            if (listElement.compareTo(element) > 0) {
                 counter++;
             }
         }
