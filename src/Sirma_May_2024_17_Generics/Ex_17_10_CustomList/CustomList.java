@@ -15,7 +15,12 @@ public class CustomList<T extends Comparable<T>>{
     }
 
     public T remove(int index) {
-        return this.elements.remove(index);
+        if (index >= 0 && index < this.elements.size()) {
+            return this.elements.remove(index);
+        } else {
+            throw new IndexOutOfBoundsException("Invalid index");
+        }
+
     }
 
     public boolean contains(T element) {
