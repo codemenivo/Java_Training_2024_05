@@ -28,11 +28,17 @@ public class CustomList<T extends Comparable<T>>{
     }
 
     public void swap(int firstIndex, int secondIndex) {
-        T firstElement = this.elements.get(firstIndex);
-        T secondElement = this.elements.get(secondIndex);
+        if ((firstIndex >= 0 && firstIndex <= this.elements.size() - 1)
+                && (secondIndex >= 0 && secondIndex <= this.elements.size() - 1)) {
 
-        this.elements.set(firstIndex, secondElement);
-        this.elements.set(secondIndex, firstElement);
+            T firstElement = this.elements.get(firstIndex);
+            T secondElement = this.elements.get(secondIndex);
+
+            this.elements.set(firstIndex, secondElement);
+            this.elements.set(secondIndex, firstElement);
+        } else {
+            throw new IndexOutOfBoundsException("Invalid index");
+        }
     }
     
     public int countGreaterThan(T elementForCompare) {
