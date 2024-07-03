@@ -15,10 +15,8 @@ public class Main {
             String input = scanner.nextLine();
             strBox.add(input);
         }
+
         System.out.println(strBox);
-
-
-
 
     }
 }
