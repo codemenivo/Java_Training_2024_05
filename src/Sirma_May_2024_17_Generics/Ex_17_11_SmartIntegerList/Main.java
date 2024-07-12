@@ -8,10 +8,10 @@ public class Main {
         smartArray.add(1);
         smartArray.add(2);
         smartArray.add(3);
-//        smartArray.add(4);
-//        smartArray.add(5);
-        int num = 3;
-        System.out.println(smartArray.indexOf(num));
+        smartArray.add(4);
+        smartArray.add(5);
+        int num = 0;
+        System.out.println(smartArray.lastInfexOf(num));
 
         //ArrayList<String> str = new ArrayList<>();
 

@@ -103,6 +103,15 @@ public class SmartArray {
         return -1;
     }
 
+    public int lastInfexOf(int element) {
+        for (int i = this.size - 1; i >= 0 ; i--) {
+            if (element == this.data[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public void add(int index, int element) {
 
         this.checkIndex(index);
