@@ -1,10 +1,13 @@
 package Sirma_May_2024_17_Generics.Ex_17_11_SmartIntegerList;
 
+import java.sql.Array;
+import java.util.Arrays;
 import java.util.function.Consumer;
 
 public class SmartArray {
     public static final int INITIAL_CAPACITY = 4;
     public static final int INITIAL_SIZE = 0;
+    public static final int INITIAL_SIZE_TEMP_OF_INDEXES = 0;
 
     private int[] data;
     private int size;
@@ -103,6 +106,8 @@ public class SmartArray {
         return -1;
     }
 
+    // Returns the index of the last occurrence of the specified element in this list,
+    // or -1 if this list does not contain the element.
     public int lastInfexOf(int element) {
         for (int i = this.size - 1; i >= 0 ; i--) {
             if (element == this.data[i]) {
@@ -111,6 +116,41 @@ public class SmartArray {
         }
         return -1;
     }
+
+    public String printAllIndexesForElements(int element) {
+       return Arrays.toString(allIndexesForElement(element));
+    }
+
+    private int[] allIndexesForElement(int element) {
+       int[] arrForIndexes = createNewArrayForIndexes(this.size);
+       int counterArrForIndexes = -1;
+        for (int i = 0; i < this.size; i++) {
+            if (element == this.data[i]) {
+                counterArrForIndexes++;
+                arrForIndexes[counterArrForIndexes] = i;
+            }
+        }
+        if (counterArrForIndexes != -1) {
+            int[]temp = new int[counterArrForIndexes + 1];
+            for (int i = 0; i <= counterArrForIndexes; i++) {
+
+               temp[i] = arrForIndexes[i];
+            }
+            return temp;
+        }
+        return createNotElements(1);
+    }
+
+    private int[] createNotElements(int i) {
+        int[] arr = new int[i];
+        arr[0] = -1;
+        return arr;
+    }
+
+   private int[] createNewArrayForIndexes(int size) {
+        return new int[size];
+    }
+
 
     public void add(int index, int element) {
 
